@@ -45,7 +45,9 @@ class FSM {
      * Returns false if undo is not available.
      * @returns {Boolean}
      */
-    undo() {}
+    undo() {
+        return false;
+    }
 
     /**
      * Goes redo to state.
