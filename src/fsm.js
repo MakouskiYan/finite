@@ -7,13 +7,17 @@ class FSM {
         if (config === undefined) {
             throw new Error;
         }
+        this.config = config;
+        this.currentState = config.initial;
     }
 
     /**
      * Returns active state.
      * @returns {String}
      */
-    getState() {}
+    getState() {
+        return this.currentState;
+    }
 
     /**
      * Goes to specified state.
@@ -30,7 +34,9 @@ class FSM {
     /**
      * Resets FSM state to initial.
      */
-    reset() {}
+    reset() {
+        return this.currentState = this.config.initial;
+    }
 
     /**
      * Returns an array of states for which there are specified event transition rules.
