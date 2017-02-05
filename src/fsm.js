@@ -3,7 +3,11 @@ class FSM {
      * Creates new FSM instance.
      * @param config
      */
-    constructor(config) {}
+    constructor(config) {
+        if (config === undefined) {
+            throw new Error;
+        }
+    }
 
     /**
      * Returns active state.
